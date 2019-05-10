@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+<p></p>
+
+<script type="text/javascript">
+
+    $.ajax('info.txt')
+        .done(function(data){
+
+        $('p').html(data);
+
+        alert(data);
+
+        })
+        .fail(function(){
+
+        alert('Could not get a data');
+        });
+
+</script>
+
+
+</body>
+</html>
